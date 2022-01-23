@@ -35,10 +35,13 @@ describe('Counter.vue component', () => {
       expect(counterValue.text()).toBe("1k")
     })
     it('should decrease button functionality', async () => {
+      // Counter value should be 0 first status,
+      // when click on decrease button
+      // Counter value should be -1 after click on decrease button
       const decreaseButton = wrapper.find("#decrease-button");
       await decreaseButton.trigger("click");
       const counterValue = wrapper.find("#count");
-      expect(counterValue.text()).toBe("0k")
+      expect(counterValue.text()).toBe("-1k")
     });
   })
 })
