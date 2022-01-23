@@ -13,14 +13,15 @@ describe('Counter.vue component', () => {
       $store: store
     }
   });
-  
-  it('should component exists', () => {
-    expect(wrapper.exists()).toBeTruthy()
-  })
-  it('should Increase button exist check',  () => {
-    expect(wrapper.find("#increase-button").exists()).toBeTruthy()
-  });
-  it('should Decrease button exist check', () => {
-    expect(wrapper.find("#decrease-button").exists()).toBeTruthy()
-  })
+    describe('Counter elements exist', () =>{
+      it('should component exists', () => {
+        expect(wrapper.exists()).toBeTruthy()
+      })
+      it('should Increase button exist check',  () => {
+        expect(wrapper.find("#increase-button").exists()).toBeTruthy()
+      });
+      it('should Decrease button exist check', () => {
+        expect(wrapper.find("#decrease-button").exists()).toBeTruthy()
+      })
+    })
 })
