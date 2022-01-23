@@ -17,5 +17,8 @@ describe('Counter.vue component', () => {
   it('should component exists', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
+  it('should Increase button exist check',  () => {
+    expect(wrapper.contains('#increase-button')).toBeTruthy()
+  });
   
 })
