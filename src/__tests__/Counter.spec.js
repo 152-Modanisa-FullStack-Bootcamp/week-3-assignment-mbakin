@@ -43,5 +43,9 @@ describe('Counter.vue component', () => {
       const counterValue = wrapper.find("#count");
       expect(counterValue.text()).toBe("-1k")
     });
+    it('should Count text exist',  () => {
+      const counterValue = wrapper.find("#count");
+      expect(counterValue.exists()).toBeTruthy()
+    });
   })
 })
