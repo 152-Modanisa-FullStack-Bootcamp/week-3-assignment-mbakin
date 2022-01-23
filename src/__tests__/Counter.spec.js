@@ -25,15 +25,20 @@ describe('Counter.vue component', () => {
   })
   
   describe('Counter component elements functionality', () => {
-    // Counter value should be 0 first status,
-    // when click on increase button
-    // Counter value should be 1 after click on increase button
-    
     it('should increase button functionality', async () => {
+      // Counter value should be 0 first status,
+      // when click on increase button
+      // Counter value should be 1 after click on increase button
       const increaseButton = wrapper.find("#increase-button");
       await increaseButton.trigger("click");
       const counterValue = wrapper.find("#count");
       expect(counterValue.text()).toBe("1k")
     })
+    it('should decrease button functionality', async () => {
+      const decreaseButton = wrapper.find("#decrease-button");
+      await decreaseButton.trigger("click");
+      const counterValue = wrapper.find("#count");
+      expect(counterValue.text()).toBe("0k")
+    });
   })
 })
