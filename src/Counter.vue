@@ -1,6 +1,6 @@
 <template>
   <div class="counter-container">
-    <button @click="decrease">Decrease</button>
+    <button id="decrease-button" @click="decrease">Decrease</button>
     <span>{{ count }}k</span>
     <button id="increase-button" @click="increase">Increase</button>
   </div>
