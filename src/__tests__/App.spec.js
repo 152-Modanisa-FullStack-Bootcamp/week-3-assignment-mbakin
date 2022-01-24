@@ -20,5 +20,9 @@ describe( 'App.vue component', () =>{
   it('sanity check', () => {
     expect(true).toBe(true);
   });
-
+  
+  it('should h1 element exists',  () => {
+    const wrapper = mountComponent();
+    expect(wrapper.find('h1').exists()).toBe(true);
+  });
 })
