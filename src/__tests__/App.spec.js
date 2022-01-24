@@ -29,4 +29,22 @@ describe( 'App.vue component', () =>{
     const wrapper = mountComponent();
     expect(wrapper.find('h1').text()).toBe('Daily Corona Cases in Turkey');
   });
+  
+  test('Notification Area text message check', () => {
+    const dailyCountValue = 3
+    const localVue = createLocalVue()
+    localVue.use(Vuex)
+    const wrapper = mount(App, {
+      localVue,
+      store: new Vuex.Store({
+        state:{
+          count: dailyCountValue
+        },
+        getters,
+      })
+    })
+    
+    const expectCountText = wrapper.find('.notificationArea').text()
+    expect(expectCountText).toEqual(`So safe. Case count is ${dailyCountValue}k`)
+  })
 })
