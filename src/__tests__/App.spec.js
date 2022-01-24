@@ -25,4 +25,8 @@ describe( 'App.vue component', () =>{
     const wrapper = mountComponent();
     expect(wrapper.find('h1').exists()).toBe(true);
   });
+  it('should h1 text equals to `Daily Corona Cases in Turkey` ', () => {
+    const wrapper = mountComponent();
+    expect(wrapper.find('h1').text()).toBe('Daily Corona Cases in Turkey');
+  });
 })
